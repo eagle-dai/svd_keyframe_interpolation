@@ -28,3 +28,6 @@ If cuda is not avaialble, refert to:
 - reinstall: check https://pytorch.org/ to get torch install command, e.g.,
     pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu124 --proxy http://proxy2:8081
     "--proxy" switch is optional, use it if you are behind a proxy.
+
+## Download checkpoint
+Download the finetuned checkpoint from https://drive.google.com/drive/folders/1H7vgiNVbxSeeleyJOqhoyRbJ97kGWGOK, and put it under checkpoints/.
