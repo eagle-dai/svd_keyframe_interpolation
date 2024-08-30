@@ -5,3 +5,10 @@ results/
 */__pycache__
 custom_diffusers/pipelines/__pycache__/
 custom_diffusers/schedulers/__pycache__/
+
+
+# my ignore files
+venv/
+*.mp4
+*.tmp
+*.log
