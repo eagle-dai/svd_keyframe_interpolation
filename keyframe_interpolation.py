@@ -29,6 +29,7 @@ def main(args):
         args.checkpoint_dir,
         subfolder="unet",
         torch_dtype=torch.float16,
+        use_safetensors=True
     ) 
     assert finetuned_unet.config.num_frames==14
     ori_unet = UNetSpatioTemporalConditionModel.from_pretrained(
@@ -36,6 +37,7 @@ def main(args):
         subfolder="unet",
         variant='fp16',
         torch_dtype=torch.float16,
+        use_safetensors=True
     )
   
     finetuned_state_dict = finetuned_unet.state_dict()
