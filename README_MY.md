@@ -1,5 +1,5 @@
 
-## Environment
+## Environment Setup
 
 ```bash
 python -m venv ./venv
@@ -31,3 +31,19 @@ If cuda is not avaialble, refert to:
 
 ## Download checkpoint
 Download the finetuned checkpoint from https://drive.google.com/drive/folders/1H7vgiNVbxSeeleyJOqhoyRbJ97kGWGOK, and put it under checkpoints/.
+
+``` bash
+mkdir -p checkpoints/svd_reverse_motion_with_attnflip
+cd checkpoints/svd_reverse_motion_with_attnflip
+pip install gdown
+
+export https_proxy=http://proxy2:8081 # optional
+export http_proxy=http://proxy2:8081 # optional
+
+gdown 1H7vgiNVbxSeeleyJOqhoyRbJ97kGWGOK --folder
+```
+
+## Run the code
+```bash
+bash keyframe_interpolation.sh
+```
